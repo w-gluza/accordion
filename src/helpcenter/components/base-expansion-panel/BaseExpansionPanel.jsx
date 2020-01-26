@@ -67,27 +67,28 @@ const ExpansionPanelDetails = withStyles({
   }
 })(MuiExpansionPanelDetails);
 
-const BaseExpansionPanel = () => {
+const BaseExpansionPanel = ({ categoryData }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
+  const { categoryType } = categoryData;
 
+  console.log("category type", categoryType);
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  let status = "tgtgHelpCenter";
   let helpCenterCategory;
 
-  if (status === "dailyOperations") {
+  if (categoryType === "dailyOperationsHelpCenter") {
     helpCenterCategory = dailyOperationsHelpCenter;
   }
-  if (status === "financials") {
+  if (categoryType === "financialsHelpCenter") {
     helpCenterCategory = financialsHelpCenter;
   }
-  if (status === "sharing") {
+  if (categoryType === "sharingHelpCenter") {
     helpCenterCategory = sharingHelpCenter;
   }
-  if (status === "tgtgHelpCenter") {
+  if (categoryType === "tgtgHelpCenter") {
     helpCenterCategory = tgtgHelpCenter;
   }
 

@@ -1,11 +1,11 @@
 import React from "react";
 import BaseCard from "../base-card/BaseCard";
 
-const HelpCenterOverview = ({ handleState }) => {
+const HelpCenterOverview = ({ handleState, setCategoryData }) => {
   return (
     <div>
       <p>Main Page</p>
-      <BaseCard handleState={handleState} />
+      <BaseCard handleState={handleState} setCategoryData={setCategoryData} />
     </div>
   );
 };

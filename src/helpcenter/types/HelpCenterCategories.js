@@ -5,7 +5,7 @@ export const helpCenterCategories = [
     category: "Daily operations",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    categoryData: "dailyOperationsHelpCenter"
+    categoryType: "dailyOperationsHelpCenter"
   },
   {
     id: "hc_02",
@@ -13,7 +13,7 @@ export const helpCenterCategories = [
     category: "Financials",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    categoryData: "financialsHelpCenter"
+    categoryType: "financialsHelpCenter"
   },
   {
     id: "hc_03",
@@ -21,7 +21,7 @@ export const helpCenterCategories = [
     category: "Sharing",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    categoryData: "sharingHelpCenter"
+    categoryType: "sharingHelpCenter"
   },
   {
     id: "hc_04",
@@ -29,7 +29,7 @@ export const helpCenterCategories = [
     category: "How does Too Good To Go work?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    categoryData: "tgtgHelpCenter"
+    categoryType: "tgtgHelpCenter"
   }
 ];
 

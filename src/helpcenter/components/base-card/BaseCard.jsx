@@ -20,12 +20,25 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const BaseCard = ({ handleState }) => {
+const BaseCard = ({ handleState, setCategoryData }) => {
   const classes = useStyles();
   return (
     <section className={classes.section}>
       {helpCenterCategories.map(element => (
-        <Card key={element.id} className={classes.card} onClick={handleState}>
+        <Card
+          key={element.id}
+          className={classes.card}
+          onClick={() => {
+            handleState();
+            setCategoryData({
+              id: element.id,
+              icon: element.icon,
+              category: element.category,
+              description: element.description,
+              categoryType: element.categoryType
+            });
+          }}
+        >
           <CardContent>
             <h4>{element.category}</h4>
             <Typography>{element.description}</Typography>
