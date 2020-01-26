@@ -6,10 +6,10 @@ import MuiExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-// import { dailyOperationsHelpCenter } from "../../types/DailyOperationsHelpCenter";
+import { dailyOperationsHelpCenter } from "../../types/DailyOperationsHelpCenter";
 import { financialsHelpCenter } from "../../types/FinancialsHelpCenter";
-// import { sharingHelpCenter } from "../../types/SharingHelpCenter";
-// import { tgtgHelpCenter } from "../../types/TgtgHelpCenter";
+import { sharingHelpCenter } from "../../types/SharingHelpCenter";
+import { tgtgHelpCenter } from "../../types/TgtgHelpCenter";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,8 +75,21 @@ const BaseExpansionPanel = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  let helpCenterCategory = financialsHelpCenter;
-  console.log(helpCenterCategory);
+  let status = "tgtgHelpCenter";
+  let helpCenterCategory;
+
+  if (status === "dailyOperations") {
+    helpCenterCategory = dailyOperationsHelpCenter;
+  }
+  if (status === "financials") {
+    helpCenterCategory = financialsHelpCenter;
+  }
+  if (status === "sharing") {
+    helpCenterCategory = sharingHelpCenter;
+  }
+  if (status === "tgtgHelpCenter") {
+    helpCenterCategory = tgtgHelpCenter;
+  }
 
   return (
     <>
