@@ -1,11 +1,11 @@
 import React from "react";
 import BaseCard from "../base-card/BaseCard";
 
-const HelpCenterOverview = () => {
+const HelpCenterOverview = ({ handleState }) => {
   return (
     <div>
       <p>Main Page</p>
-      <BaseCard />
+      <BaseCard handleState={handleState} />
     </div>
   );
 };

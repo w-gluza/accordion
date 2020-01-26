@@ -6,10 +6,10 @@ import MuiExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import { dailyOperationsHelpCenter } from "../../types/DailyOperationsHelpCenter";
+// import { dailyOperationsHelpCenter } from "../../types/DailyOperationsHelpCenter";
 import { financialsHelpCenter } from "../../types/FinancialsHelpCenter";
-import { sharingHelpCenter } from "../../types/SharingHelpCenter";
-import { tgtgHelpCenter } from "../../types/TgtgHelpCenter";
+// import { sharingHelpCenter } from "../../types/SharingHelpCenter";
+// import { tgtgHelpCenter } from "../../types/TgtgHelpCenter";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,11 +75,12 @@ const BaseExpansionPanel = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const helpcenterCategory = financialsHelpCenter;
+  let helpCenterCategory = financialsHelpCenter;
+  console.log(helpCenterCategory);
 
   return (
     <>
-      {helpcenterCategory.map(element => (
+      {helpCenterCategory.map(element => (
         <ExpansionPanel
           key={element.id}
           expanded={expanded === element.id}
